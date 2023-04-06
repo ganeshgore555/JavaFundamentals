@@ -5,6 +5,7 @@ public class PolymorphismBasics {
 	public static void main(String[] args) {
 		InterfaceDrive drive = new Car();
 		System.out.println(drive.X);
+		//drive.X = "Drive_X_var_v1";
 		System.out.println(drive.Y);
 		System.out.println(drive.Z);
 		drive.drive();
@@ -14,6 +15,7 @@ public class PolymorphismBasics {
 		
 		AbstractVehicle vehicle = new Car();
 		System.out.println(vehicle.X);
+		vehicle.X = "Vehicle_X_var_v1";
 		System.out.println(vehicle.Z);
 		vehicle.drive();
 		vehicle.race();
