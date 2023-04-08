@@ -12,6 +12,9 @@ public class StringBasics {
 		System.out.println("s3 == s4 " + (s3 == s4));
 		System.out.println("s1 == s3 " + (s1 == s3));
 		System.out.println("s1.equals(s3) " + s1.equals(s3));
+		
+		
+		System.out.println(("aac".compareTo("abc")));
 	}
 
 }
