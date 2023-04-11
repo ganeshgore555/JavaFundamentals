@@ -22,7 +22,7 @@ public class ThreadBenchmarkTest {
 		
 		Instant start = Instant.now();
 		
-		try (var executor = Executors.newFixedThreadPool(100)) {
+		try (var executor = Executors.newFixedThreadPool(1000)) {
 		  for(int i = 0; i < 10000; i++) {
 		    executor.submit(runnable);
 		  }
