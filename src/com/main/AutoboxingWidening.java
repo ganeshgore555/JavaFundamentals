@@ -34,8 +34,8 @@ public class AutoboxingWidening {
 		System.out.println("Integer : " + i);
 	}
 	
-	public static void printNumber(long i) {
-		System.out.println("long : " + i);
+	public static void printNumber(Long i) {
+		System.out.println("Long : " + i);
 	}
 	
 	public static void printNumber(int i) {
