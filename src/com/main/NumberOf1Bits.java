@@ -3,7 +3,7 @@ package com.main;
 public class NumberOf1Bits {
 
 	public static void main(String[] args) {
-		System.out.println(new NumberOf1Bits().hammingWeight(00000000000000000000000000001011));
+		System.out.println(new NumberOf1Bits().hammingWeight(00000000000000000000000100001011));
 	}
 
     public int hammingWeight(int n) {
