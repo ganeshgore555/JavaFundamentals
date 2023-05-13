@@ -9,11 +9,29 @@ public class Switch {
 		System.out.println(isWeekDayV1_1(Day.SUN));		
 		System.out.println(isWeekDayV1_2(Day.SUN));		
 		System.out.println(isWeekDayV2(Day.SUN));
+		System.out.println(objectSwitch());
 	}
 
 	enum Day {
 		MON, TUE, WED, THUR, FRI, SAT, SUN
 	};
+
+	private static int objectSwitch() {
+		Object o = new Person("Lee", 35);
+		int result = 0;
+		switch(o) {
+		 case String s: result = 2;
+		 		break;
+		 case Integer i: result = 3;
+		 		break;
+		 case Person p: result = 1;
+				break;		 		
+		 case Long l: result = 4;
+		 		break;
+		 default: result = 10;
+		}
+		return result;
+	}
 	
 	private static int simpleSwitch() {
 		int i = 2;
