@@ -4,6 +4,9 @@ public abstract class AbstractVehicle implements InterfaceDrive{
 	public String X = "Vehicle_X_var";
 	private static String Y = "Vehicle_static_Y_var";
 	public String Z = "Vehicle_Z_var";
+	protected AbstractVehicle() {
+		super();
+	}
 	public void start() {
 		System.out.println("AbstractVehicle::drive");
 	}
@@ -21,6 +24,7 @@ public abstract class AbstractVehicle implements InterfaceDrive{
 	}
 	
 	public abstract void drive();
+	
 }
 
 class Car extends AbstractVehicle implements InterfaceDrive, InterfaceDriveII{
