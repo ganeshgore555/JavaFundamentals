@@ -54,5 +54,20 @@ public class CollectorsApi {
 		Long count = personList.parallelStream().collect(Collectors.counting());
 		System.out.println(count);
 		
+		BufferedReader brfb = new BufferedReader(new FileReader(new File(".//resources//footballer.txt")));
+		ArrayList<FootBaller> playerList = new ArrayList<FootBaller>();
+		Stream<String> streamfb = brfb.lines();
+		//streamfb.forEach(System.out::println);
+		streamfb.forEach(l -> {
+			String[] vals = l.split(" ");
+			boolean isCaptain = Integer.parseInt(vals[3]) == 0;			
+			FootBaller fb = new FootBaller(vals[1], Integer.parseInt(vals[5]), Integer.parseInt(vals[0]), Integer.parseInt(vals[2]), Integer.parseInt(vals[3]), Integer.parseInt(vals[4]), isCaptain);
+			playerList.add(fb);
+		});
+		System.out.println(playerList);		
+		Map<Integer, List<FootBaller>> playerByClub = playerList.stream().collect(Collectors.groupingBy(FootBaller::getClubNo));
+		System.out.println(playerByClub);
+		Map<Integer, Double> averageGoalsByClub = playerList.stream().collect(Collectors.groupingBy(FootBaller::getClubNo, Collectors.averagingInt(FootBaller::getGoals)));
+		System.out.println(averageGoalsByClub);
 	}
 }

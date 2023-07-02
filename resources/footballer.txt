@@ -1,0 +1,10 @@
+1 tevez 1 4 20 34
+2 silva 1 4 45 35
+3 ronaldo 2 0 122 39
+4 messi 1 0 123 35
+5 neymar 1 4 83 28
+6 salah 3 0 150 35
+7 harling 3 6 43 26
+8 hazard 3 6 33 27
+9 mbappe 2 3 100 24
+10 benzema 2 3 98 28 

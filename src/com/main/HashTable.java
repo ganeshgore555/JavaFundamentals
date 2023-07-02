@@ -23,6 +23,12 @@ public class HashTable {
 		set.add(list1);
 		set.add(list2);
 		System.out.println(set);
+		
+		HashSet set1 = new HashSet<>(set);
+		set.remove(list1);
+		System.out.println(set);
+		System.out.println(set1);
+		
 	}
 
 }
