@@ -10,12 +10,13 @@ public class PolymorphismBasics {
 		System.out.println(drive.Z);
 		drive.drive();
 		drive.race();
-
+		//drive.start();
+		//drive.stop();
 		System.out.println("--------------------");
 		
 		AbstractVehicle vehicle = new Car();
+		//vehicle.X = "Vehicle_X_var_v1";
 		System.out.println(vehicle.X);
-		vehicle.X = "Vehicle_X_var_v1";
 		System.out.println(vehicle.Z);
 		vehicle.drive();
 		vehicle.race();
